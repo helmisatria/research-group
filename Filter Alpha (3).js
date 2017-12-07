@@ -5,8 +5,7 @@ data = []
 
 for (var i = 0; i < data_filtered.length; i++) {
     let xy = {
-        x: data_filtered[i].field3,
-        y: data_filtered[i].field5
+        alpha: data_filtered[i].field9
     }
     data.push(xy)
 }
