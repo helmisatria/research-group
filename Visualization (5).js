@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
     y: [0],
   }
 
-  // const SATUAN = 10
+  const SATUAN = 10
   for (var i = 0; i < data.length; i++) {
-    const SATUAN = (Math.random() * 10)
+    // const SATUAN = (Math.random() * 10)
     console.log(i + ' :' + data[i].alpha);
     let x, y;
     x = result.x[i] + ((2 * SATUAN) * (Math.cos(data[i].alpha * Math.PI / 180.0)));
