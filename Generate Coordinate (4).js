@@ -6,11 +6,13 @@ const result = {
   y: [0],
 }
 
-for (var i = 1; i < data.length; i++) {
+// const SATUAN = 10
+for (var i = 0; i < data.length; i++) {
   const SATUAN = (Math.random() * 10)
+  console.log(i + ' :' + data[i].alpha);
   let x, y;
-  x = result.x[i-1] + ( (2 * SATUAN) * (Math.cos(data[i].alpha)));
-  y = result.y[i-1] + ( (2 * SATUAN) * (Math.sin(data[i].alpha)));
+  x = result.x[i] + ((2 * SATUAN) * (Math.cos(data[i].alpha * Math.PI / 180.0)));
+  y = result.y[i] + ((2 * SATUAN) * (Math.sin(data[i].alpha * Math.PI / 180.0)));
   result['x'].push(x)
   result['y'].push(y)
 }
